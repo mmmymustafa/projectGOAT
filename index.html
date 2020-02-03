@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="./dist/bundle.js"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- <style>
+        .mySlides {
+            display: none;
+        }
+    </style> -->
+
+    <title>Document</title>
+
+</head>
+<body>
+    <div class="splash-page">
+        <div class="in-memory-page">
+            <div class="in-memory-background" style="background-image: url(https://i.ytimg.com/vi/4eoM26ZmHd0/maxresdefault.jpg)">
+                <div class="in-memory-first-half">
+                    <p class="quote fade-in one" style="color: white;">"The moment you give up, is the moment you let someone else win"</p>
+                    <p class="mamba fade-in two" style="color: white;">- Kobe Bryant</p>
+                </div>
+                <div class="in-memory-second-half fade-in three">
+                    <p class="rest-in-peace" style="color: white;">Rest in peace</p>
+                    <div class="names">
+                        <img class="kobe-gianna-pic" src="http://www.mpnaija.com/wp-content/uploads/2020/01/5e2e82152d6de8682054103065826852-300x300.png">
+                        <p class="kobe" style="color: white;">Kobe Bean Bryant</p>
+                        <p class="and" style="color: white;">&</p>
+                        <p class="gianna" style="color: white;">Gianna Maria-Onore Bryant</p>
+                    </div>
+                    <div class="data-entry-button fade-in four" onclick="showCarousel()">Enter</div>
+                </div>
+            </div>
+        </div>
+
+    <div onclick="closeModal()" class="background-carousel">
+        <div class="mySlides" style="background-image: url(https://www.billboard.com/files/media/kobe-bryant-gianna-bw-billboard-1548.jpg);"></div>
+        <div class="mySlides" style="background-image: url(https://cdn.cnn.com/cnnnext/dam/assets/200127143225-kobe-bryant-rip-super-tease.jpg);"></div>
+        <div class="mySlides" style="background-image: url(http://images.summitmedia-digital.com/cosmo/images/2020/01/27/kobe-bryant-daughter-gianna-death-helicopter-crash-1580095435.jpg);"></div>
+        <div class="mySlides" style="background-image: url(https://sportshub.cbsistatic.com/i/2020/01/26/cdbd7432-9040-4ba9-9d4d-5f0239e066a1/kobe-bryant.jpg);"></div>
+        <div class="mySlides" style="background-image: url(https://sportshub.cbsistatic.com/i/r/2020/01/26/b5dc8d14-6115-41f0-87d1-83f30efcd4af/thumbnail/1200x675/a92143df3cdd1e2ae1b11bf54eb31162/kobe-bryant.jpg);"></div>
+        <div class="mySlides" style="background-image: url(https://www.washingtonpost.com/resizer/TK8eDjK1khtKzgqPihOf9Q4Y-Nw=/1400x0/arc-anglerfish-washpost-prod-thelily-washpost.s3.amazonaws.com/public/IHPAPCNSB5GZRBSC662R4PAWU4.jpg);"></div>
+        <div class="data-page-body">
+            <div class="data-selector-container">
+                <div class="sidenav-button one" onclick="showAllSeasons()">All NBA Seasons matches</div>
+                <div class="sidenav-button two">Personal Achievements</div>
+                <div class="sidenav-button three">Gianna's Achievements</div>
+                <div class="sidenav-button four">Credits</div>
+            </div>
+            <div id="seasons-modal">
+                    <ul id="seasons">
+                    </ul>
+            </div>
+            <div id="game-info">
+                <ul id="game-data">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <script>
+        let myIndex = 0;
+        carousel();
+
+        function carousel() {
+            const slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.opacity = "0";
+            }
+            myIndex++;
+            if (myIndex > slides.length) { myIndex = 1 }
+            slides[myIndex - 1].style.opacity = "1";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+    <script>
+        function showCarousel() {
+            document.getElementsByClassName("in-memory-page")[0].style.display = "none";
+            document.getElementsByClassName("background-carousel")[0].style.display = "block";
+        }
+    </script>
+    <script src="./jscodes.js"></script>
+</body>
+</html>

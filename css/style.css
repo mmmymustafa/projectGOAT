@@ -1,0 +1,284 @@
+body{
+    font-family: 'Merriweather', serif;
+}
+
+.background-carousel{
+    display: none;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.mySlides{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: opacity 0.5s ease-in-out;
+    background-blend-mode: multiply;
+}
+.in-memory-page{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.in-memory-background{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    text-align: -webkit-center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.quote{
+    transition: opacity 1s ease;
+}
+
+.mamba{
+    margin-top: 0.75rem;
+}
+
+.rest-in-peace{
+    margin-bottom: 0.75rem;
+}
+
+.kobe-gianna-pic{
+    border: double white;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.data-entry-button{
+    padding: 0.65rem;
+    border: solid;
+    border-width: 0.1rem;
+    font-size: 1.4rem;
+    width: 4rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+.data-entry-button:hover{
+    /* background: linear-gradient(110deg, rgba(253,184,39,0.5) 60%, rgba(84,37,131,0.5) 60%); */
+    background: rgba(253,184,39,1);
+    color: rgba(84, 37, 131, 1);
+    text-shadow:
+		-1px -1px 0 rgb(255, 255, 255),
+		1px -1px 0 rgb(255, 255, 255),
+		-1px 1px 0 rgb(255, 255, 255),
+        1px 1px 0 rgb(255, 255, 255);
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+	opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+}
+
+.fade-in.one {
+-webkit-animation-delay: 0.5s;
+-moz-animation-delay: 0.5s;
+animation-delay: 0.5s;
+}
+
+.fade-in.two {
+-webkit-animation-delay: 2.5s;
+-moz-animation-delay:2.5s;
+animation-delay: 2.5s;
+}
+
+.fade-in.three {
+-webkit-animation-delay: 4.5s;
+-moz-animation-delay: 4.5s;
+animation-delay: 4.5s;
+}
+
+.fade-in.four {
+-webkit-animation-delay: 6s;
+-moz-animation-delay: 6s;
+animation-delay: 6s;
+}
+
+.data-page-body{
+    padding-top: 5vh;
+    padding-left: 0.5rem;
+    display: flex;
+}
+
+.data-selector-container{
+  background-color: white;
+  text-align: center;
+  border-radius: 1rem;
+  width: 25vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+}
+
+.sidenav-button{
+    font-size: 1.5rem;
+    border-bottom: solid;
+    padding-bottom: 2.05rem;
+    border-width: thin;
+    padding-top: 2.05rem;
+    cursor: pointer;
+}
+
+.sidenav-button:hover{
+    /* background: linear-gradient(110deg, rgba(253,184,39,0.5) 60%, rgba(84,37,131,0.5) 60%); */
+    background: rgba(253,184,39,1);
+    color: rgba(84, 37, 131, 1);
+    text-shadow:
+		-1px -1px 0 rgb(255, 255, 255),
+		1px -1px 0 rgb(255, 255, 255),
+		-1px 1px 0 rgb(255, 255, 255),
+        1px 1px 0 rgb(255, 255, 255);
+}
+
+.sidenav-button.one{
+    border-top: solid;
+    border-width: thin;
+}
+
+#seasons-modal{
+    background-color: transparent;
+    text-align: center;
+    border-radius: 1rem;
+    margin-left: 2.25vw;
+    width: 32rem;
+    display: none;
+    height: 90vh;
+    color: black;
+    position: relative;
+    justify-content: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+}
+
+#seasons{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 5rem;
+    row-gap: 1rem;
+    color: white;
+    margin: 1rem 0rem;
+}
+
+#season{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    padding: 0rem 0.7rem 0rem 0.7rem;
+    border-radius: 0.5rem;
+    border: solid;
+}
+
+#season:hover{
+    background: rgba(253,184,39,1);
+    color: rgba(84, 37, 131, 1);
+    text-shadow: -1px -1px 0 rgb(255, 255, 255), 
+                  1px -1px 0 rgb(255, 255, 255), 
+                  -1px 1px 0 rgb(255, 255, 255), 
+                  1px 1px 0 rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+#game-info{
+    background-color: transparent;
+    text-align: center;
+    border-radius: 1rem;
+    width: 70vw;
+    height: 90vh;
+    display: none;
+    flex-direction: column;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    overflow-wrap: break-word;
+    margin-left: 1rem;
+}
+
+#game-data{
+    line-height: normal;
+}
+
+#game{
+    padding: 0.5rem;
+    border-bottom: solid;
+    border-width: thin;
+}
+
+#game:hover{
+    background: rgba(253,184,39,1);
+    color: rgba(84, 37, 131, 1);
+    text-shadow: -1px -1px 0 rgb(255, 255, 255), 
+                  1px -1px 0 rgb(255, 255, 255), 
+                  -1px 1px 0 rgb(255, 255, 255), 
+                  1px 1px 0 rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+#bar-chart-g{
+    white-space: nowrap;
+    position: relative;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.bar{ 
+    fill: rgba(253,184,39,1); 
+    display: inline-block;
+}
+
+.bar:hover{
+    /* opacity: 0.5; */
+    fill: rgba(84, 37, 131, 1);;
+}
+
+.domain{
+    stroke: white;
+}
+
+.tick{
+    stroke: white;
+}
+
+line{
+    stroke: white;
+}
+
+.tooltip {
+  position: absolute;
+  display: none;
+  background: rgba(0, 0, 0, .7);
+  border-radius: 3px;
+  box-shadow: -3px 3px 15px #939393;
+  color: white;
+  padding: 6px;
+  line-height: normal;
+}
+
